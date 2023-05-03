@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@mixin border{
+    border: 1px solid blue;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid gray;
+    // height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    .logobtn{
+        // @include border;
+        // position: relative;
+            .button{
+                width: 20px;
+                height: 25px;
+                // top: 20px;
+                margin-bottom: 14px;
+            }
+        
+        .logo{
+            display: inline-block;
+            margin-left: 20px;
+            // height: 20px;
+            // @include border;
+            // margin-top: 8px;
+            .logoimg{
+                // @include border;
+                height: 55px;
+            }
+        }
+        img{
+            width: 100px;
+            height: 50px;
+            // height: inherit;
+        }
+    }
+    .search{
+        // border: 1px solid blue;
+        width: max-content;
+       form{
+        position: relative;
+       }
+        input[type='text']{
+            line-height: 36px;
+            font-size: 16px;
+            padding: 1px 0;
+            padding-left: 15px;
+            margin: 6px 0;
+            margin-right: 1px;
+            border:1px solid rgb(198, 198, 198);
+            border-bottom-left-radius: 18px;
+            border-top-left-radius: 18px;
+            // width: 300px;
+            min-width: 560px;
+        }
+        input[type='text']:focus{
+            outline: 1px solid blue;
+        }
+        .searchicon{
+            display: inline-block;
+            width: 60px;
+            height: 39px;
+            position: absolute;
+            top: 6px;
+            border:1px solid rgb(198, 198, 198);
+            border-left: 0;
+            background-color: rgb(201, 201, 201);
+            background-color: #f5f2f2fc;
+            border-bottom-right-radius: 18px;
+            border-top-right-radius: 18px;
+            // @include border;
+            // float: right;
+            text-align: center;
+            img{
+                width: 24px;
+                margin-top: 6px;
+            }
+        }
+        .mic{
+            // @include border;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            position:absolute;
+            top: 6px;
+            left: 630px;
+            border-radius: 50%;
+            img{
+                width: 22px;
+                height: 22px;
+                margin-top: 9px;
+                margin-left: 9px;
+            }
+        }
+        .mic:hover{
+            background-color: rgb(231, 229, 229);
+            cursor: pointer;
+        }
+    }
+    .logoright{
+        a{
+            display: block;
+            float: left;
+            text-decoration: none;
+            // @include border;
+            padding: 10px;
+            margin-top: 6px;
+            margin-right: 6px;
+            .one{
+                width: 24px;
+            }
+            .two{
+                width:24px;
+            }
+            .three{
+                width: 28px;
+                height: 28px;
+                border-radius: 50px;
+                background-color: rgb(0, 26, 128);
+                color: white;
+                display: flex;
+                justify-content: center;
+
+            }
+        }
+        a:hover{
+            background-color: rgb(231, 229, 229);
+            border-radius: 100px;
+        }
+    }
+}
+.sidenav{
+    position: absolute;
+    height: 60vh;
+    top: 80px;
+    // left: 10px;
+    width: 70px;
+    // border: 1px solid lime;
+    a{
+        display: block;
+        text-decoration: none;
+        // @include border;
+        line-height: 20px;
+        font-size: 11px;
+        text-align: center;
+    }
+    .sideone,.sidetwo,.sidethree,.sidefour{
+        width: 30px;
+        height: 30px;
+        margin-top: 20px;
+    }
+    p{
+        line-height: 15px;
+    }
+}
+.pills{
+    margin-left: 90px;
+    // border: 1px solid red;
+    height: 50px;
+}
+
+.maincontent{
+    // margin-left: 90px;
+    width: 85vw;
+    margin-left: 140px;
+    margin-top: 30px;
+    // border: 1px solid blue;
+    // height: 200vh;
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    .content{
+        // @include border;
+        
+        // width: 400px;
+        height: 250px;
+        margin:20px 15px;
+        // float: left;
+        .image{
+            border: 1px solid rgb(178, 177, 177);
+            height: 190px;
+            border-radius: 10px;
+            margin: auto;
+            width: 330px;
+        }
+    }
+ 
+    .underimage{
+        position: relative;
+       
+        .logo{
+            border: 1px solid rgb(178, 177, 177);
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 50px;
+            position: absolute;
+            top: 10px;
+        }
+        .description {
+            // @include border;
+            width: 260px;
+            text-align:left;
+            margin-left: 50px;
+            margin-top: 10px;
+            margin-right: 20px;
+            // height: 40px;
+            // position: relative;
+            overflow-y: hidden;
+            text-overflow:ellipsis;
+            display: inline-block;
+            
+            .secondp{
+                font-size: 13px;
+                color: gray;
+                margin-top: 6px;
+            }
+        }
+     
+      
+    }
+}
+.pills{
+    padding: 4px 20px;
+    a{
+        display: inline-block;
+        // @include border;
+        padding: 6px 10px;
+        text-decoration: none;
+        border-radius: 8px;
+        margin: 10px 5px;
+        line-height: 20px;
+        background-color: rgb(235, 231, 231);
+        font-size: 14px;
+    }
+    a:hover{
+        background-color: rgb(215, 212, 212);
+        transition: .4s;
+    }
+}
